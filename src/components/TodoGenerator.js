@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from 'react-redux';
-import { addTodoItem, doneTodoItem, deleteTodo } from './todoListSlice';
+import { addTodoItem } from './todoListSlice';
 import '../App.css';
-
 
 const TodoGenerator = (props) => {
 
@@ -27,6 +26,7 @@ const TodoGenerator = (props) => {
         } else{ 
             dispatch(addTodoItem(result));
             setItemIndex(itemIndex + 1);
+            setItem("");
         }
     }
 

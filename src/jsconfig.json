@@ -1,17 +1,17 @@
-{
+// {
 
-    "compilerOptions": {
+//     "compilerOptions": {
 
-        "module": "ES6",
+//         "module": "ES6",
 
-        "moduleResolution": "node",
+//         "moduleResolution": "node",
 
-        "jsx": "preserve",
+//         "jsx": "preserve",
 
-        "checkJs": true
+//         "checkJs": true
 
-    },
+//     },
 
-    "exclude": ["node_modules", "**/node_modules/*"]
+//     "exclude": ["node_modules", "**/node_modules/*"]
 
-}
+// }

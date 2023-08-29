@@ -6,7 +6,7 @@ function App() {
     <div className="App">
 
     <div className="CounterGroup">
-      <h1>Todo List</h1>
+      <h1>📋 Todo List</h1>
       <TodoList />
     </div>
 

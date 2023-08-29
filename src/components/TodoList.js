@@ -5,8 +5,6 @@ import TodoGenerator from './TodoGenerator';
 import TodoGroup from './TodoGroup';
 
 const TodoList = () => {
-   
-    //const [itemList, setItemList] = useState([]);
 
     const itemList = useSelector((state) =>
         state.todoList.todoList

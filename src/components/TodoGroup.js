@@ -1,7 +1,6 @@
 import TodoItem from './TodoItem';
 import '../App.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { deleteTodo } from './todoListSlice';
+import { useDispatch} from 'react-redux';
 
 
 const TodoGroup = (props) => {
@@ -11,9 +10,6 @@ const TodoGroup = (props) => {
     const generateKey = (index) => {
         return (Math.random() + index);
     }
-
-    
-    // const itemList = useSelector((state) => state.todoList)
     
     return (
         <div className="todoGroup">
@@ -21,8 +17,8 @@ const TodoGroup = (props) => {
                 props.todoItemList.map((item) => 
                 <TodoItem 
                 key={item.id} 
-                // item={item} 
                 itemKey={item.id}
+                isDone={item.done}
                 todoItem={item.text}>
                 </TodoItem>
                 

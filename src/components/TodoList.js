@@ -1,29 +1,32 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import '../App.css';
 import TodoGenerator from './TodoGenerator';
 import TodoGroup from './TodoGroup';
-import axios from 'axios';
+import { useEffect } from 'react';
+import * as todoApi from "../api/todoApi"; 
+import { resetTodoTask } from './todoListSlice';
 
-const TodoList = (props) => {
-    const api = axios.create({
-    baseURL: 'https://64edbef81f8721827141ae4d.mockapi.io/'
-    });
+const TodoList = () => {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await todoApi.getTodoTask();
+            dispatch(resetTodoTask(response.data));
+        }
+        fetchData();
 
-    api.get('/todos').then(response => console.log(response.data));
+    }, []);
 
-    const itemList = useSelector((state) => state.todoList.todoList);
+    // const itemList = useSelector((state) => state.todoList.todoList);
 
-    const filteredItems = itemList.filter(item => props.isDone ? item.done : !item.done);
+    // const filteredItems = itemList.filter(item => props.isDone ? item.done : !item.done);
 
     return (
         <div className="todoList">
             
-            <TodoGroup 
-                isDone={props.isDone} 
-                todoItemList={filteredItems}
-            />
+            <TodoGroup />
 
-            {!props.isDone &&  <TodoGenerator />}
+            <TodoGenerator />
            
         </div>
     );

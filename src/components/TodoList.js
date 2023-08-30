@@ -5,15 +5,17 @@ import TodoGroup from './TodoGroup';
 
 const TodoList = (props) => {
 
-    const itemList = useSelector((state) =>
-        state.todoList.todoList
-    )
+    const itemList = useSelector((state) => state.todoList.todoList);
 
-    console.log(itemList);
+    const filteredItems = itemList.filter(item => props.isDone ? item.done : !item.done);
 
     return (
         <div className="todoList">
-            <TodoGroup isDone={props.isDone} todoItemList={itemList}/>
+            
+            <TodoGroup 
+                isDone={props.isDone} 
+                todoItemList={filteredItems}
+            />
 
             {!props.isDone &&  <TodoGenerator />}
            

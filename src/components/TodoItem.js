@@ -1,22 +1,27 @@
 import { useDispatch } from 'react-redux';
 import '../App.css';
-import { doneTodoItem, deleteTodo } from './todoListSlice';
+import * as todoApi from "../api/todoApi"; 
+import { doneTodoItem, deleteTodo, resetTodoTask } from './todoListSlice';
 
 const TodoItem = (props) => {
 
     const dispatch = useDispatch();
 
-    const handleCheckboxChange = () => {  
-        if(props.isDone) {
-            console.log("go to the detail page");
-        } else {
-            dispatch(doneTodoItem(props.itemKey));
-        }
+    const handleCheckboxChange = async () => {  
+
+        await todoApi.updateTodoTask(props.itemKey, {done: !props.isDone})
+        const response = await todoApi.getTodoTask();
+        dispatch(resetTodoTask(response.data));
     };
 
-    const deleteItem = () => {
+    const deleteItem = async () => {
+
         if(window.confirm("Do you want to delete this?")){
-            dispatch(deleteTodo(props.itemKey));   
+            // dispatch(deleteTodo(props.itemKey));   
+
+            await todoApi.deleteTodoTask(props.itemKey);
+            const response = await todoApi.getTodoTask();
+            dispatch(resetTodoTask(response.data));
         }
     };
 

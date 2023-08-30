@@ -25,10 +25,8 @@ const DoneList = (props) => {
     return (
 
         <div className="doneList">
-            <h2>Done List</h2>
+            <h3>Done List</h3>
                 <DoneGroup />
-                {/* <DoneGroup isDone={props.isDone} todoList={filteredItems}/> */}
-              
         </div>
     );
 }

@@ -37,7 +37,7 @@ const TodoGenerator = () => {
 
     return (
         <div className="todoGenerator">
-            
+           
             <input placeholder="Anything in mind?" value={item} onChange={onItemChange} />
             <br/> 
             <button onClick={addItems}>ADD</button>

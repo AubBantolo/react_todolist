@@ -1,5 +1,4 @@
 import DoneItem from "./DoneItem";
-import { useSelector } from 'react-redux';
 
 const DoneGroup = (props) => {
 

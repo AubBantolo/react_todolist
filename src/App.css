@@ -55,14 +55,14 @@ body {
 
 
 .todoItem {
-  border: 1px solid rgb(49, 49, 49);
-  border-radius: 10px;
+  /* border: 1px solid rgb(192, 192, 192); */
+  border-radius: 5px;
   padding: 10px;
   width: 500px;
   margin-bottom: 10px;
   font-size: 20px;
   border-width: 3px;
-  box-shadow: 0 0 0 1px #dddddd, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .todoItem .strikethrough {
@@ -131,6 +131,10 @@ body {
   align-items: center;
 }
 
+.todoGenerator .line {
+  text-decoration-line: overline; 
+}
+
 .todoGenerator input {
   margin-top: 5px;
   text-align: center; 
@@ -177,5 +181,110 @@ body {
   color: black;
   transition: .4s;
 }
+
+.update-todo-modal button:hover {
+  background: rgb(95, 95, 95);
+  color: black;
+  transition: .4s;
+}
+
+.doneList {
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  background: rgb(255, 255, 255);
+}
+
+.doneList h3 {
+  margin-top: -5px;
+  letter-spacing: 10px;
+  font-size: 25px;
+  color: rgb(43, 43, 43);
+  text-shadow: -1px 4px 2px rgba(143, 143, 143, 0.67);
+}
+
+.modal-content {
+  height: 100px;
+}
+
+.modal-content {
+  height: 100px;
+}
+
+.modal-content input {
+  text-align: left; 
+  padding: 7px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  border: 5px solid transparent;
+  height: 20px;
+  width: 440px;
+  letter-spacing: 1px;
+
+  :focus{
+      border: 2px solid #000;
+      border-radius: 4px;
+  }
+}
+
+.modal-content input:focus {
+  transition: .4s;
+  text-shadow: none; /* Remove text shadow on focus */
+}
+
+.modal-content p {
+  margin-top: 10px;
+  font-style: italic;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: rgb(43, 43, 43);
+  text-shadow: -1px 4px 2px rgba(143, 143, 143, 0.67);
+}
+
+.modal-delete p {
+
+  font-style: italic;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: rgb(43, 43, 43);
+  text-shadow: -1px 4px 2px rgba(143, 143, 143, 0.67);
+}
+
+.todo-detail {
+  border-radius: 30px;
+  width: 500px;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  background: rgb(255, 255, 255);
+}
+
+.todo-detail h3 {
+  margin-top: 5px;
+  letter-spacing: 5px;
+  font-size: 25px;
+  color: rgb(43, 43, 43);
+  text-shadow: -1px 4px 2px rgba(143, 143, 143, 0.67);
+}
+
+.todo-content {
+  border-radius: 30px;
+  padding: 30px;
+  letter-spacing: 5px;
+  font-size: 20px;
+  background: rgb(255, 255, 255);
+}
+
+.todo-content #text {
+  
+  border-radius: 30px;
+  padding: 10px;
+  padding-left: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  background: rgb(255, 255, 255);
+  margin-top: 20px;
+  text-shadow: -1px 4px 2px rgba(143, 143, 143, 0.67);
+}
+
 
 

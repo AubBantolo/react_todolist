@@ -1,6 +1,7 @@
 import TodoItem from './TodoItem';
 import '../App.css';
 import { useSelector } from 'react-redux';
+import TodoGenerator from './TodoGenerator';
 
 const TodoGroup = () => {
 
@@ -15,7 +16,8 @@ const TodoGroup = () => {
                     itemKey={item.id}
                     isDone={item.done}
                     todoItem={item.text}>
-                </TodoItem>  
+                </TodoItem>
+                
             )}
         </div>
     );

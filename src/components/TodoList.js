@@ -17,10 +17,6 @@ const TodoList = () => {
 
     }, []);
 
-    // const itemList = useSelector((state) => state.todoList.todoList);
-
-    // const filteredItems = itemList.filter(item => props.isDone ? item.done : !item.done);
-
     return (
         <div className="todoList">
             
@@ -29,6 +25,7 @@ const TodoList = () => {
             <TodoGenerator />
            
         </div>
+   
     );
 };
 

@@ -1,5 +1,9 @@
 .App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
 }
 
 .App-logo {
@@ -15,6 +19,21 @@
   margin-top: 100px;
   letter-spacing: 10px;
   margin-bottom: 60px;
+}
+
+.App ul {
+  display: flex;
+  text-align: center;
+}
+
+.App ul > li {
+  padding: 10px;
+  list-style: none;
+  letter-spacing: 5px;
+}
+
+.App a {
+  text-decoration: none;
 }
 
 .todoItem {

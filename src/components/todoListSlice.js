@@ -6,10 +6,14 @@ const todoListSlice = createSlice({
         todoList: [],
     }, 
     reducers: {
+        resetTodoTask: (state, action) => {
+            state.todoList = action.payload;
+        },
+
         addTodoItem: (state, action) => {
             state.todoList.push(action.payload);
         },
-        
+
         doneTodoItem: (state, action) => {
             const todoItem = state.todoList.find(item => item.id === action.payload);
             if(todoItem) {
@@ -24,5 +28,5 @@ const todoListSlice = createSlice({
     }
 });
 
-export const { addTodoItem, doneTodoItem, deleteTodo} = todoListSlice.actions;
+export const { resetTodoTask, addTodoItem, doneTodoItem, deleteTodo} = todoListSlice.actions;
 export default todoListSlice.reducer;

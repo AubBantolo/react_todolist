@@ -40,7 +40,6 @@ const TodoItem = (props) => {
         setIsDeleteModalVisible(false);
     };
 
-
     const showUpdateModal = () => {
         setIsUpdateModalVisible(true);
     };

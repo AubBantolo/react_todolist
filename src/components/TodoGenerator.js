@@ -30,7 +30,7 @@ const TodoGenerator = () => {
             await todoApi.addTodoTask(result);
             const response = await todoApi.getTodoTask();
             dispatch(resetTodoTask(response.data));
-         
+            
             setItem("");
         }
     }

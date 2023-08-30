@@ -3,17 +3,20 @@ import '../App.css';
 import TodoGenerator from './TodoGenerator';
 import TodoGroup from './TodoGroup';
 
-const TodoList = () => {
+const TodoList = (props) => {
 
     const itemList = useSelector((state) =>
         state.todoList.todoList
     )
 
+    console.log(itemList);
+
     return (
         <div className="todoList">
-            <TodoGroup todoItemList={itemList}/>
+            <TodoGroup isDone={props.isDone} todoItemList={itemList}/>
 
-            <TodoGenerator />
+            {!props.isDone &&  <TodoGenerator />}
+           
         </div>
     );
 };

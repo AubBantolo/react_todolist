@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { addTodoItem } from './todoListSlice';
 import '../App.css';
 
-const TodoGenerator = (props) => {
+const TodoGenerator = () => {
 
     const [item, setItem] = useState('');
     const [itemIndex, setItemIndex] = useState(0);
@@ -21,7 +21,7 @@ const TodoGenerator = (props) => {
     };
 
     const addItems = () => {
-        if(!item.match(/[a-z]/i)) {
+        if(!item || item.trim() === "") {
             alert("No input, please add something!")
         } else{ 
             dispatch(addTodoItem(result));
@@ -39,6 +39,5 @@ const TodoGenerator = (props) => {
     )
     
 };
-
 
 export default TodoGenerator;

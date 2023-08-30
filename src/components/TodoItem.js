@@ -1,11 +1,9 @@
 import { useDispatch } from 'react-redux';
 import '../App.css';
-import React, { useState } from "react";
 import { doneTodoItem, deleteTodo } from './todoListSlice';
 
 const TodoItem = (props) => {
 
-    const [isChecked, setIsChecked] = useState(true);
     const dispatch = useDispatch();
 
     const handleCheckboxChange = () => {  

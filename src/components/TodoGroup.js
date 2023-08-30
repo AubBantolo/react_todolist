@@ -1,11 +1,7 @@
 import TodoItem from './TodoItem';
 import '../App.css';
-import { useDispatch} from 'react-redux';
-
 
 const TodoGroup = (props) => {
-
-    const dispatch = useDispatch();
 
     const generateKey = (index) => {
         return (Math.random() + index);

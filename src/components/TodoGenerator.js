@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useDispatch } from 'react-redux';
-import { addTodoItem } from './todoListSlice';
+import { addTodoItem, resetTodoTask } from './todoListSlice';
 import { v4 as uuidv4} from 'uuid';
+import * as todoApi from "../api/todoApi"; 
 import '../App.css';
 
 const TodoGenerator = () => {
@@ -19,12 +20,15 @@ const TodoGenerator = () => {
         done: false,
     };
 
-    const addItems = () => {
+    const addItems = async () => {
         if(!item || item.trim() === "") {
             alert("No input, please add something!")
-        } else{ 
+        } else { 
 
-            dispatch(addTodoItem(result));
+            await todoApi.addTodoTask(result);
+            const response = await todoApi.getTodoTask();
+            dispatch(resetTodoTask(response.data));
+         
             setItem("");
         }
     }

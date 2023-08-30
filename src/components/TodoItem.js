@@ -7,9 +7,11 @@ const TodoItem = (props) => {
     const dispatch = useDispatch();
 
     const handleCheckboxChange = () => {  
-
-        dispatch(doneTodoItem(props.itemKey));
-
+        if(props.isDone) {
+            console.log("go to the detail page");
+        } else {
+            dispatch(doneTodoItem(props.itemKey));
+        }
     };
 
     const deleteItem = () => {

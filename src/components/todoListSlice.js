@@ -11,7 +11,6 @@ const todoListSlice = createSlice({
         },
         
         doneTodoItem: (state, action) => {
-
             const todoItem = state.todoList.find(item => item.id === action.payload);
             if(todoItem) {
                 todoItem.done = !todoItem.done;

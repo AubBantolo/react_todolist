@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useDispatch } from 'react-redux';
 import { addTodoItem, resetTodoTask } from './todoListSlice';
 import { v4 as uuidv4} from 'uuid';
+import { Input } from 'antd';
+
 import * as todoApi from "../api/todoApi"; 
 import '../App.css';
 
@@ -35,6 +37,7 @@ const TodoGenerator = () => {
 
     return (
         <div className="todoGenerator">
+            
             <input placeholder="Anything in mind?" value={item} onChange={onItemChange} />
             <br/> 
             <button onClick={addItems}>ADD</button>

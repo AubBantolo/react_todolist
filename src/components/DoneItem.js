@@ -6,7 +6,6 @@ import { resetTodoTask } from './todoListSlice';
 import { useState } from "react";
 import { Modal } from 'antd';
 
-
 const DoneItem = (props) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -32,9 +31,7 @@ const DoneItem = (props) => {
 
 
     return (
-            <div className="todoItem">
-                {/* <span id="selectItem" className={props.isDone ? "strikethrough" : ""} onClick={onClickTodoItem}>{props.todoItem}</span> */}
-            
+            <div className="todoItem">            
                 <span id="selectItem" className={props.isDone ? "strikethrough" : ""} onClick={onClickTodoItem}> 
                 {props.todoItem} 
                 </span> 

@@ -1,7 +1,6 @@
 import TodoItem from './TodoItem';
 import '../App.css';
 import { useSelector } from 'react-redux';
-import TodoGenerator from './TodoGenerator';
 
 const TodoGroup = () => {
 

@@ -1,21 +1,20 @@
 import { useState } from "react";
 import { useDispatch } from 'react-redux';
 import { addTodoItem } from './todoListSlice';
+import { v4 as uuidv4} from 'uuid';
 import '../App.css';
 
 const TodoGenerator = () => {
 
     const [item, setItem] = useState('');
-    const [itemIndex, setItemIndex] = useState(0);
     const dispatch = useDispatch();
-
 
     const onItemChange = (event) => {
         setItem(event.target.value);
     }
-
+    
     const result = {
-        id: itemIndex + Math.random(),
+        id: uuidv4(),
         text: item,
         done: false,
     };
@@ -24,8 +23,8 @@ const TodoGenerator = () => {
         if(!item || item.trim() === "") {
             alert("No input, please add something!")
         } else{ 
+
             dispatch(addTodoItem(result));
-            setItemIndex(itemIndex + 1);
             setItem("");
         }
     }

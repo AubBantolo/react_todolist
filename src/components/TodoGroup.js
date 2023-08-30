@@ -3,10 +3,6 @@ import '../App.css';
 
 const TodoGroup = (props) => {
 
-    const generateKey = (index) => {
-        return (Math.random() + index);
-    }
-    
     return (
         <div className="todoGroup">
            {

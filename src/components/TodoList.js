@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import '../App.css';
+import '../css/TodoList.css';
 import TodoGenerator from './TodoGenerator';
 import TodoGroup from './TodoGroup';
 import { useEffect } from 'react';

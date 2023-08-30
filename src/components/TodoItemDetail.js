@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import '../css/TodoItemDetail.css';
 
 export const TodoItemDetail = () => {
     const { id } = useParams();

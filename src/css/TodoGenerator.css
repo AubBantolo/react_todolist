@@ -1,0 +1,55 @@
+.todoGenerator {
+  align-items: center;
+}
+
+.todoGenerator .line {
+  text-decoration-line: overline; 
+}
+
+.todoGenerator input {
+  margin-top: 5px;
+  text-align: center; 
+  padding: 7px;
+  border-radius: 10px;
+  font-size: 17px;
+  border: 5px solid transparent;
+  height: 20px;
+  width: 500px;
+  letter-spacing: 1px;
+  text-shadow: 1px 3px 3px rgba(75, 81, 92, 0.6);
+  :focus{
+      border: 2px solid #000;
+      border-radius: 4px;
+      
+  }
+}
+.todoGenerator input:focus {
+  transition: .4s;
+  text-shadow: none; /* Remove text shadow on focus */
+}
+
+
+.todoGenerator button {
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 1px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 25px;
+  font-size: 16px;
+  background: black;
+  letter-spacing: 5px;
+  font-weight: bolder;
+  color: #dddddd;
+  border: 2px solid transparent;
+  height: 40px;
+  width: 200px;
+  box-shadow: 0 0 0 1px #dddddd, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%);
+}
+
+
+.todoGenerator button:hover {
+  background: rgb(95, 95, 95);
+  color: black;
+  transition: .4s;
+}

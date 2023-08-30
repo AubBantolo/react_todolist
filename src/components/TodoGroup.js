@@ -1,5 +1,5 @@
 import TodoItem from './TodoItem';
-import '../App.css';
+import '../css/TodoGroup.css';
 import { useSelector } from 'react-redux';
 
 const TodoGroup = () => {

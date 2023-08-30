@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import '../App.css';
+import '../css/TodoItem.css';
 import * as todoApi from "../api/todoApi"; 
 import { resetTodoTask } from './todoListSlice';
 import { useState } from "react";

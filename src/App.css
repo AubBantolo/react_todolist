@@ -16,6 +16,7 @@
     font-family: 'Montserrat Alternates', sans-serif;
     
 }
+
 body {
   background: rgb(247, 247, 247);
 }
@@ -51,156 +52,6 @@ body {
   font-weight: bolder;
   transition: .3s;
   color: rgb(31, 31, 31);
-}
-
-
-.todoItem {
-  border-radius: 5px;
-  padding: 10px;
-  width: 500px;
-  margin-bottom: 10px;
-  font-size: 20px;
-  border-width: 3px;
-  text-shadow: -1px 3px 1px rgba(233, 233, 233, 0.77);
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-}
-
-.todoItem .strikethrough {
-  text-decoration: line-through;
-  font-weight: bold;
-  color:  gray;
-}
-
-.todoItem input{
-  background: none;
-  border: none; 
-  float: left;
-  cursor: pointer;
-}
-
-.todoItem span {
-  cursor: pointer;
-}
-
-.todoItem #delete {
-  background: none;
-  border: none;
-  font-size: 17px;
-  cursor: pointer;
-  color: rgb(19, 19, 19);
-  float: right;
-}
-
-.todoItem #delete:hover {
-  color: rgb(224, 45, 45);
-}
-
-.todoItem #update {
-  background: none;
-  border: none;
-  font-size: 17px;
-  cursor: pointer;
-  color: black;
-  float: left;
-}
-
-.todoItem #update:hover {
-  color: rgb(243, 180, 63);
-}
-
-
-.bgTodoList {
-  background: rgb(235, 235, 235);
-}
-
-.todoList {
-  display: inline;
-  border-radius: 30px;
-  padding: 30px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-  background: rgb(255, 255, 255);
-}
-
-
-.todoGroup {
-  justify-content: center;
-  align-items: center;
-}
-
-.todoGenerator {
-  align-items: center;
-}
-
-.todoGenerator .line {
-  text-decoration-line: overline; 
-}
-
-.todoGenerator input {
-  margin-top: 5px;
-  text-align: center; 
-  padding: 7px;
-  border-radius: 10px;
-  font-size: 17px;
-  border: 5px solid transparent;
-  height: 20px;
-  width: 500px;
-  letter-spacing: 1px;
-  text-shadow: 1px 3px 3px rgba(75, 81, 92, 0.6);
-  :focus{
-      border: 2px solid #000;
-      border-radius: 4px;
-      
-  }
-}
-.todoGenerator input:focus {
-  transition: .4s;
-  text-shadow: none; /* Remove text shadow on focus */
-}
-
-
-.todoGenerator button {
-  align-items: center;
-  margin-top: 15px;
-  margin-left: 1px;
-  cursor: pointer;
-  padding: 5px;
-  border-radius: 25px;
-  font-size: 16px;
-  background: black;
-  letter-spacing: 5px;
-  font-weight: bolder;
-  color: #dddddd;
-  border: 2px solid transparent;
-  height: 40px;
-  width: 200px;
-  box-shadow: 0 0 0 1px #dddddd, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%);
-}
-
-.todoGenerator button:hover {
-  background: rgb(95, 95, 95);
-  color: black;
-  transition: .4s;
-}
-
-.update-todo-modal button:hover {
-  background: rgb(95, 95, 95);
-  color: black;
-  transition: .4s;
-}
-
-.doneList {
-  border-radius: 30px;
-  padding: 30px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-  background: rgb(255, 255, 255);
-}
-
-.doneList h3 {
-  margin-top: -5px;
-  letter-spacing: 10px;
-  font-size: 25px;
-  color: rgb(43, 43, 43);
-  text-shadow: -1px 4px 2px rgba(143, 143, 143, 0.67);
 }
 
 .modal-content {
@@ -250,41 +101,5 @@ body {
   color: rgb(43, 43, 43);
   text-shadow: -1px 4px 2px rgba(143, 143, 143, 0.67);
 }
-
-.todo-detail {
-  border-radius: 30px;
-  width: 500px;
-  padding: 30px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-  background: rgb(255, 255, 255);
-}
-
-.todo-detail h3 {
-  margin-top: 5px;
-  letter-spacing: 5px;
-  font-size: 25px;
-  color: rgb(43, 43, 43);
-  text-shadow: -1px 4px 2px rgba(143, 143, 143, 0.67);
-}
-
-.todo-content {
-  border-radius: 30px;
-  padding: 30px;
-  letter-spacing: 5px;
-  font-size: 20px;
-  background: rgb(255, 255, 255);
-}
-
-.todo-content #text {
-  
-  border-radius: 30px;
-  padding: 10px;
-  padding-left: 5px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  background: rgb(255, 255, 255);
-  margin-top: 20px;
-  text-shadow: -1px 4px 2px rgba(143, 143, 143, 0.67);
-}
-
 
 

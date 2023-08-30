@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { resetTodoTask } from './todoListSlice';
 import { v4 as uuidv4} from 'uuid';
 import * as todoApi from "../api/todoApi"; 
-import '../App.css';
+import '../css/TodoGenerator.css';
 
 const TodoGenerator = () => {
 

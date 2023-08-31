@@ -13,7 +13,7 @@ const TodoItem = (props) => {
     const [isUpdateModalVisible, setIsUpdateModalVisible] = useState(false);
 
     const handleCheckboxChange = async () => {  
-        await todoApi.updateTodoTask(props.itemKey, {done: !props.isDone})
+        await todoApi.updateTodoTask(props.itemKey, {text: props.todoItem, done: !props.isDone})
         const response = await todoApi.getTodoTask();
         dispatch(resetTodoTask(response.data));
     };
@@ -41,6 +41,7 @@ const TodoItem = (props) => {
     };
 
     const showUpdateModal = () => {
+        setUpdateValue(props.todoItem);
         setIsUpdateModalVisible(true);
     };
 
@@ -53,7 +54,6 @@ const TodoItem = (props) => {
         <div className="todoItem">
 
             <span id="update" onClick={showUpdateModal}> ✐ </span>
-
             <Modal
                 open={isUpdateModalVisible}
                 onOk={updateItem}
@@ -108,7 +108,7 @@ const TodoItem = (props) => {
                 <input
                     value={updateValue}
                     onChange={(input) => setUpdateValue(input.target.value)}
-                    placeholder="Please input here.."
+                    placeholder="Please input value here..."
                 />
                 </div>
             </Modal>

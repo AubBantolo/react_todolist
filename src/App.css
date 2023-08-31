@@ -58,10 +58,6 @@ body {
   height: 100px;
 }
 
-.modal-content {
-  height: 100px;
-}
-
 .modal-content input {
   text-align: left; 
   padding: 7px;

@@ -49,11 +49,6 @@ const TodoItem = (props) => {
         setUpdateValue("");
     };
 
-    const modalStyle = {
-        color: 'black'
-    };
-
-
     return (
         <div className="todoItem">
 
@@ -64,7 +59,6 @@ const TodoItem = (props) => {
                 onOk={updateItem}
                 onCancel={handleUpdateCancel}
                 className="update-todo-modal"
-                style={modalStyle}
                 footer={[
                     <button key="back" 
                         style={{ 

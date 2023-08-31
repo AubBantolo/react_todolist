@@ -46,6 +46,7 @@ const TodoItem = (props) => {
 
     const handleUpdateCancel = () => {
         setIsUpdateModalVisible(false);
+        setUpdateValue("");
     };
 
     const modalStyle = {

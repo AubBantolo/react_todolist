@@ -1,7 +1,7 @@
 import DoneItem from "./DoneItem";
 import { useSelector } from 'react-redux';
 
-const DoneGroup = (props) => {
+const DoneGroup = () => {
 
     const toDoItems = useSelector((state) => state.todoList.todoList.filter(todo => todo.done))
 

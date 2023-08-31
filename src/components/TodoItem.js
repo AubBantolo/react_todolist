@@ -1,36 +1,29 @@
-import { useDispatch } from 'react-redux';
 import '../css/TodoItem.css';
-import * as todoApi from "../api/todoApi"; 
-import { resetTodoTask } from './todoListSlice';
 import { useState } from "react";
 import { Modal } from 'antd';
+import { useTodos } from "../hooks/useTodos";
+
 
 const TodoItem = (props) => {
 
-    const dispatch = useDispatch();
+    const { updateTodoTask, deleteTodoTask } = useTodos();
     const [updateValue, setUpdateValue] = useState("");
     const [isDeleteModalVisible, setIsDeleteModalVisible] = useState(false);
     const [isUpdateModalVisible, setIsUpdateModalVisible] = useState(false);
 
-    const handleCheckboxChange = async () => {  
-        await todoApi.updateTodoTask(props.itemKey, {text: props.todoItem, done: !props.isDone})
-        const response = await todoApi.getTodoTask();
-        dispatch(resetTodoTask(response.data));
+    const handleCheckboxChange = () => {  
+        updateTodoTask(props.itemKey, props.todoItem, !props.isDone);
     };
 
-    const deleteItem = async () => {
-        await todoApi.deleteTodoTask(props.itemKey);
-        const response = await todoApi.getTodoTask();
-        dispatch(resetTodoTask(response.data));
-    };
+    const deleteitem = () => {
+        deleteTodoTask(props.itemKey);
+    }
 
-    const updateItem = async () => {
-        await todoApi.updateTodoTask(props.itemKey, { text: updateValue });
-        const response = await todoApi.getTodoTask();
-        dispatch(resetTodoTask(response.data));
+    const updateItem = () => {
+        updateTodoTask(props.itemKey, updateValue);
         setIsUpdateModalVisible(false);
         setUpdateValue("");
-    };
+    }
 
     const showDeleteModal = () => {
         setIsDeleteModalVisible(true);
@@ -120,7 +113,7 @@ const TodoItem = (props) => {
             <span id="delete" onClick={showDeleteModal}> ✖ </span>
             <Modal
                 open={isDeleteModalVisible}
-                onOk={deleteItem}
+                onOk={deleteitem}
                 onCancel={handleDeleteCancel}
                 footer={[
                     <button key="back" 
@@ -160,7 +153,7 @@ const TodoItem = (props) => {
                             borderRadius: '25px',
                             boxShadow: '0 0 0 1px #dddddd, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%)'
                         }}
-                        onClick={deleteItem}
+                        onClick={deleteitem}
                     >
                         Delete
                     </button>,

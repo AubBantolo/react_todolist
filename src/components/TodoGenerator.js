@@ -15,7 +15,7 @@ const TodoGenerator = () => {
     }
     
     const result = {
-        id: uuidv4(),
+        // id: uuidv4(),
         text: item,
         done: false,
     };
